@@ -1,9 +1,22 @@
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+        .sticky-footer-action .btn-action {
+            flex: 1;
+            justify-content: center;
+            font-size: 1rem;
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الصديق التبريد | AC & Refrigeration Services Dammam</title>
+    <title>الصديق التبريد | AC & Refrigeration Services Jeddah</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -11,12 +24,12 @@
     
     <style>
         :root {
-            --primary-blue: #0b2545; /* پریمیم گہرا شاہی نیلا رنگ */
-            --ice-blue: #134074;
-            --accent-gold: #e0a96d; /* گولڈن ٹچ جو منفرد لک دے گا */
+            --primary-black: #111111; /* پریمیم گہرا کالا رنگ */
+            --accent-yellow: #ffcc00; /* چمکدار اور خوبصورت زرد رنگ */
             --dark-gray: #1e293b;
             --light-bg: #f8fafc;
             --whatsapp-green: #25d366;
+            --pure-white: #ffffff;
         }
 
         * {
@@ -35,7 +48,7 @@
 
         /* Top Bar & Header */
         .top-action-bar {
-            background: #ffffff;
+            background: var(--primary-black);
             padding: 12px 15px;
             display: flex;
             justify-content: space-between;
@@ -43,7 +56,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         .brand-area {
@@ -54,14 +67,14 @@
         }
 
         .brand-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            color: var(--primary-blue);
+            color: var(--accent-yellow);
         }
 
         .brand-subtitle {
-            font-size: 0.8rem;
-            color: #64748b;
+            font-size: 0.85rem;
+            color: #a0aec0;
             display: block;
         }
 
@@ -73,13 +86,13 @@
 
         /* Premium Language Switcher Button */
         .lang-switch-btn {
-            background: var(--dark-gray);
-            color: white;
+            background: var(--accent-yellow);
+            color: var(--primary-black);
             border: none;
             padding: 8px 14px;
             border-radius: 50px;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.85rem;
             display: flex;
             align-items: center;
@@ -88,39 +101,46 @@
         }
 
         .lang-switch-btn:hover {
-            background: var(--ice-blue);
+            background: var(--pure-white);
         }
 
         .btn-action {
             text-decoration: none;
-            color: white;
+            color: var(--primary-black);
             padding: 10px 16px;
             border-radius: 50px;
             font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: 700;
             display: flex;
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-        .btn-whatsapp { background-color: var(--whatsapp-green); }
-        .btn-call { background-color: var(--ice-blue); }
+        .btn-whatsapp { 
+            background-color: var(--whatsapp-green); 
+            color: var(--pure-white);
+        }
+        .btn-call { 
+            background-color: var(--accent-yellow); 
+        }
 
         /* Hero Banner */
         .hero {
-            background: linear-gradient(rgba(11, 37, 69, 0.8), rgba(11, 37, 69, 0.8)), url('https://cdn.phototourl.com/free/2026-07-11-85f3e2eb-714e-4d97-a939-5de53fe07bf7.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://cdn.phototourl.com/free/2026-07-11-85f3e2eb-714e-4d97-a939-5de53fe07bf7.jpg');
             background-size: cover;
             background-position: center;
             color: white;
             padding: 60px 20px;
             text-align: center;
+            border-bottom: 5px solid var(--accent-yellow);
         }
 
         .hero h1 {
             font-size: 2.2rem;
             margin-bottom: 10px;
             font-weight: 700;
+            color: var(--accent-yellow);
         }
 
         .hero p {
@@ -130,7 +150,7 @@
         }
 
         .location-tag {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 204, 0, 0.2);
             padding: 6px 15px;
             border-radius: 20px;
             display: inline-flex;
@@ -138,7 +158,8 @@
             gap: 8px;
             font-size: 0.9rem;
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid var(--accent-yellow);
+            color: var(--accent-yellow);
         }
 
         /* Services Grid */
@@ -146,7 +167,7 @@
             text-align: center;
             margin: 40px 20px 20px;
             font-size: 1.8rem;
-            color: var(--primary-blue);
+            color: var(--primary-black);
             position: relative;
             padding-bottom: 10px;
         }
@@ -155,7 +176,7 @@
             content: '';
             width: 60px;
             height: 4px;
-            background: var(--accent-gold);
+            background: var(--accent-yellow);
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -180,6 +201,11 @@
             border: 1px solid #e2e8f0;
         }
 
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-yellow);
+        }
+
         .service-card img {
             width: 100%;
             height: 220px;
@@ -193,7 +219,7 @@
         .service-title {
             font-size: 1.25rem;
             font-weight: 700;
-            color: #0f172a;
+            color: var(--primary-black);
             margin-bottom: 5px;
         }
 
@@ -216,12 +242,12 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(17, 17, 17, 0.95);
             backdrop-filter: blur(10px);
             padding: 12px 20px;
             display: flex;
             gap: 15px;
-            box-shadow: 0 -5px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
             z-index: 999;
         }
 
@@ -233,11 +259,12 @@
         }
 
         footer {
-            background: var(--primary-blue);
-            color: #94a3b8;
+            background: var(--primary-black);
+            color: #a0aec0;
             text-align: center;
             padding: 30px 20px 100px;
             font-size: 0.9rem;
+            border-top: 3px solid var(--accent-yellow);
         }
 
         @media (min-width: 768px) {
@@ -275,8 +302,8 @@
     <div class="hero">
         <span class="location-tag">
             <i class="fas fa-map-marker-alt"></i> 
-            <span class="ar-text">الدمام، المملكة العربية السعودية</span>
-            <span class="en-text">Dammam, Saudi Arabia</span>
+            <span class="ar-text">جدة، المملكة العربية السعودية</span>
+            <span class="en-text">Jeddah, Saudi Arabia</span>
         </span>
         
         <h1 class="ar-text" style="margin-top: 15px;">خدمات الصديق التبريد المتقدمة</h1>
@@ -316,7 +343,7 @@
             <div class="service-content">
                 <div class="ar-text">
                     <h3 class="service-title">واشنگ مشین کی مرمت</h3>
-                    <p class="service-desc">آٹومیٹک اور نارمل واشنگ مشینوں کی فوری سروس اور ہر قسم کے فالٹ درست کرنا।</p>
+                    <p class="service-desc">آٹومیٹک اور نارمل واشنگ مشینوں کی فوری سروس اور ہر قسم کے فالٹ درست کرنا۔</p>
                 </div>
                 <div class="en-text">
                     <h3 class="service-title">Washing Machine Repair</h3>
@@ -335,7 +362,7 @@
                 </div>
                 <div class="en-text">
                     <h3 class="service-title">We Buy Old AC Units</h3>
-                    <p class="service-desc">Want to sell your used or faulty air conditioners? We offer the best competitive prices in Dammam.</p>
+                    <p class="service-desc">Want to sell your used or faulty air conditioners? We offer the best competitive prices in Jeddah.</p>
                 </div>
             </div>
         </div>
@@ -354,17 +381,16 @@
 
     <!-- Footer -->
     <footer>
-        <p style="color: white; font-weight: bold; font-size: 1.1rem;" class="ar-text">الصديق التبريد</p>
-        <p style="color: white; font-weight: bold; font-size: 1.1rem;" class="en-text">Al-Saddiq Cooling Services</p>
-        <p><i class="fas fa-map-marker-alt"></i> Dammam, Saudi Arabia</p>
+        <p style="color: var(--accent-yellow); font-weight: bold; font-size: 1.2rem;" class="ar-text">الصديق التبريد</p>
+        <p style="color: var(--accent-yellow); font-weight: bold; font-size: 1.2rem;" class="en-text">Al-Saddiq Cooling Services</p>
+        <p><i class="fas fa-map-marker-alt"></i> Jeddah, Saudi Arabia</p>
         <p><i class="fas fa-phone"></i> +966 54 290 6848</p>
-        <hr style="border: 0; border-top: 1px solid #134074; margin: 15px 0;">
+        <hr style="border: 0; border-top: 1px solid #333; margin: 15px 0;">
         <p style="font-size: 0.8rem;">&copy; 2026 All Rights Reserved.</p>
     </footer>
 
     <!-- JavaScript to Handle Language Switch Dynamically -->
     <script>
-        // Set Default Language to Arabic/Urdu (RTL)
         document.documentElement.setAttribute('lang', 'ar');
 
         function toggleLanguage() {
@@ -372,11 +398,9 @@
             const langBtnText = document.getElementById('lang-btn-text');
             
             if (htmlTag.getAttribute('lang') === 'ar') {
-                // Switch to English
                 htmlTag.setAttribute('lang', 'en');
                 langBtnText.textContent = 'العربية';
             } else {
-                // Switch to Arabic
                 htmlTag.setAttribute('lang', 'ar');
                 langBtnText.textContent = 'English';
             }
