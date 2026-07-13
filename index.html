@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الصديق التبريد | AC & Refrigeration Services Jeddah</title>
+    <title>الصديق التبريد | خدمات صيانة التكييف بجدة</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -11,8 +11,8 @@
     
     <style>
         :root {
-            --primary-black: #111111; /* پریمیم گہرا کالا رنگ */
-            --accent-yellow: #ffcc00; /* چمکدار اور خوبصورت زرد رنگ */
+            --primary-black: #111111; 
+            --accent-yellow: #ffcc00; 
             --dark-gray: #1e293b;
             --light-bg: #f8fafc;
             --whatsapp-green: #25d366;
@@ -71,7 +71,7 @@
             align-items: center;
         }
 
-        /* Premium Language Switcher Button */
+        /* Language Switcher Button */
         .lang-switch-btn {
             background: var(--accent-yellow);
             color: var(--primary-black);
@@ -188,11 +188,6 @@
             border: 1px solid #e2e8f0;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-yellow);
-        }
-
         .service-card img {
             width: 100%;
             height: 220px;
@@ -215,12 +210,13 @@
             color: #475569;
         }
 
-        /* Language Toggle Dynamic Visibility */
+        /* Strict Language Visibility Rules */
         html[lang="ar"] .en-text { display: none !important; }
         html[lang="en"] .ar-text { display: none !important; }
         
-        /* RTL Direction handling automatically */
+        /* RTL Direction handling */
         html[lang="ar"] { direction: rtl; }
+        html[lang="en"] { direction: ltr; }
         html[lang="ar"] .top-action-bar { flex-direction: row-reverse; }
 
         /* Sticky Footer Mobile */
@@ -267,7 +263,6 @@
 
     <!-- Top Action Bar -->
     <div class="top-action-bar">
-        <!-- Quick Call/Whatsapp & Language Switcher in corner -->
         <div class="quick-actions">
             <button class="lang-switch-btn" onclick="toggleLanguage()">
                 <i class="fas fa-globe"></i> <span id="lang-btn-text">English</span>
@@ -296,13 +291,13 @@
         <h1 class="ar-text" style="margin-top: 15px;">خدمات الصديق التبريد المتقدمة</h1>
         <h1 class="en-text" style="margin-top: 15px;">Al-Saddiq Advanced Cooling Solutions</h1>
         
-        <p class="ar-text">تکییف، تبريد، اور واشنگ مشین کی بہترین صيانة بأعلى جودة</p>
+        <p class="ar-text">أفضل خدمات صيانة التكييف والتبريد وإصلاح الغسالات بأعلى جودة</p>
         <p class="en-text">Top-quality AC maintenance, gas filling & washing machine repairs</p>
     </div>
 
     <!-- Section Title -->
     <h2 class="section-title">
-        <span class="ar-text">خدماتنا المحترفة</span>
+        <span class="ar-text">خدماتنا الاحترافية</span>
         <span class="en-text">Our Professional Services</span>
     </h2>
     
@@ -314,8 +309,8 @@
             <img src="https://cdn.phototourl.com/free/2026-07-11-55677bfb-6cd1-4fac-a113-c706904740b7.jpg" alt="AC Repair">
             <div class="service-content">
                 <div class="ar-text">
-                    <h3 class="service-title">اے سی کی مرمت اور سروس</h3>
-                    <p class="service-desc">ہر قسم کے ونڈو اور اسپلٹ اے سی کی بہترین سروس، گیس چارجنگ اور مرمت کا کام تسلی بخش کیا جاتا ہے۔</p>
+                    <h3 class="service-title">صيانة وإصلاح التكييف</h3>
+                    <p class="service-desc">صيانة ممتازة لجميع أنواع المكيفات الاسبليت والشباك، وتعبئة الفريون ومعالجة الأعطال بدقة.</p>
                 </div>
                 <div class="en-text">
                     <h3 class="service-title">AC Repair & Service</h3>
@@ -329,8 +324,8 @@
             <img src="https://cdn.phototourl.com/free/2026-07-11-91810011-c55c-47ea-badf-a43feb624e48.jpg" alt="Washing Machine">
             <div class="service-content">
                 <div class="ar-text">
-                    <h3 class="service-title">واشنگ مشین کی مرمت</h3>
-                    <p class="service-desc">آٹومیٹک اور نارمل واشنگ مشینوں کی فوری سروس اور ہر قسم کے فالٹ درست کرنا۔</p>
+                    <h3 class="service-title">صيانة الغسالات</h3>
+                    <p class="service-desc">إصلاح فوري لجميع أنواع الغسالات الأوتوماتيكية والعادية مع توفير قطع الغيار اللازمة.</p>
                 </div>
                 <div class="en-text">
                     <h3 class="service-title">Washing Machine Repair</h3>
@@ -344,8 +339,8 @@
             <img src="https://cdn.phototourl.com/free/2026-07-11-23b4fe3c-0e38-4493-8a15-6a4ec3978757.jpg" alt="Old AC">
             <div class="service-content">
                 <div class="ar-text">
-                    <h3 class="service-title">پرانے اے سی کی خرید و فروخت</h3>
-                    <p class="service-desc">ہم پرانے اور ناکارہ ائیر کنڈیشنر بہترین قیمت پر خریدتے ہیں۔ ابھی رابطہ کریں۔</p>
+                    <h3 class="service-title">شراء المكيفات القديمة</h3>
+                    <p class="service-desc">نشتري المكيفات المستعملة والعطلانة بأفضل الأسعار في جدة. اتصل بنا الآن.</p>
                 </div>
                 <div class="en-text">
                     <h3 class="service-title">We Buy Old AC Units</h3>
@@ -370,7 +365,7 @@
     <footer>
         <p style="color: var(--accent-yellow); font-weight: bold; font-size: 1.2rem;" class="ar-text">الصديق التبريد</p>
         <p style="color: var(--accent-yellow); font-weight: bold; font-size: 1.2rem;" class="en-text">Al-Saddiq Cooling Services</p>
-        <p><i class="fas fa-map-marker-alt"></i> Jeddah, Saudi Arabia</p>
+        <p><i class="fas fa-map-marker-alt"></i> <span class="ar-text">جدة، المملكة العربية السعودية</span><span class="en-text">Jeddah, Saudi Arabia</span></p>
         <p><i class="fas fa-phone"></i> +966 54 290 6848</p>
         <hr style="border: 0; border-top: 1px solid #333; margin: 15px 0;">
         <p style="font-size: 0.8rem;">&copy; 2026 All Rights Reserved.</p>
@@ -378,6 +373,7 @@
 
     <!-- JavaScript to Handle Language Switch Dynamically -->
     <script>
+        // Default on load is Arabic
         document.documentElement.setAttribute('lang', 'ar');
 
         function toggleLanguage() {
