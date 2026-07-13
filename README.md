@@ -1,1 +1,386 @@
-# Mzml-repair-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصديق التبريد | AC & Refrigeration Services Dammam</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #0b2545; /* پریمیم گہرا شاہی نیلا رنگ */
+            --ice-blue: #134074;
+            --accent-gold: #e0a96d; /* گولڈن ٹچ جو منفرد لک دے گا */
+            --dark-gray: #1e293b;
+            --light-bg: #f8fafc;
+            --whatsapp-green: #25d366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Top Bar & Header */
+        .top-action-bar {
+            background: #ffffff;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .brand-area {
+            text-align: right;
+        }
+        html[lang="en"] .brand-area {
+            text-align: left;
+        }
+
+        .brand-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .brand-subtitle {
+            font-size: 0.8rem;
+            color: #64748b;
+            display: block;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* Premium Language Switcher Button */
+        .lang-switch-btn {
+            background: var(--dark-gray);
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .lang-switch-btn:hover {
+            background: var(--ice-blue);
+        }
+
+        .btn-action {
+            text-decoration: none;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .btn-whatsapp { background-color: var(--whatsapp-green); }
+        .btn-call { background-color: var(--ice-blue); }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(11, 37, 69, 0.8), rgba(11, 37, 69, 0.8)), url('https://cdn.phototourl.com/free/2026-07-11-85f3e2eb-714e-4d97-a939-5de53fe07bf7.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .location-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 15px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Services Grid */
+        .section-title {
+            text-align: center;
+            margin: 40px 20px 20px;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--accent-gold);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .services-container {
+            padding: 10px 20px 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 5px;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        /* Language Toggle Dynamic Visibility */
+        html[lang="ar"] .en-text { display: none !important; }
+        html[lang="en"] .ar-text { display: none !important; }
+        
+        /* RTL Direction handling automatically */
+        html[lang="ar"] { direction: rtl; }
+        html[lang="ar"] .top-action-bar { flex-direction: row-reverse; }
+
+        /* Sticky Footer Mobile */
+        .sticky-footer-action {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+        .sticky-footer-action .btn-action {
+            flex: 1;
+            justify-content: center;
+            font-size: 1rem;
+            padding: 14px;
+        }
+
+        footer {
+            background: var(--primary-blue);
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px 20px 100px;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-container {
+                max-width: 1100px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .hero h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Action Bar -->
+    <div class="top-action-bar">
+        <!-- Quick Call/Whatsapp & Language Switcher in corner -->
+        <div class="quick-actions">
+            <button class="lang-switch-btn" onclick="toggleLanguage()">
+                <i class="fas fa-globe"></i> <span id="lang-btn-text">English</span>
+            </button>
+            <a href="https://wa.me/966542906848" class="btn-action btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> <span class="ar-text">واتساب</span><span class="en-text">WhatsApp</span>
+            </a>
+        </div>
+        
+        <div class="brand-area">
+            <div class="brand-title ar-text">الصديق التبريد</div>
+            <div class="brand-title en-text">Al-Saddiq Cooling</div>
+            <span class="brand-subtitle ar-text">خدمات صيانة وإصلاح التكييف</span>
+            <span class="brand-subtitle en-text">Professional AC Repair Services</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <span class="location-tag">
+            <i class="fas fa-map-marker-alt"></i> 
+            <span class="ar-text">الدمام، المملكة العربية السعودية</span>
+            <span class="en-text">Dammam, Saudi Arabia</span>
+        </span>
+        
+        <h1 class="ar-text" style="margin-top: 15px;">خدمات الصديق التبريد المتقدمة</h1>
+        <h1 class="en-text" style="margin-top: 15px;">Al-Saddiq Advanced Cooling Solutions</h1>
+        
+        <p class="ar-text">تکییف، تبريد، اور واشنگ مشین کی بہترین صيانة بأعلى جودة</p>
+        <p class="en-text">Top-quality AC maintenance, gas filling & washing machine repairs</p>
+    </div>
+
+    <!-- Section Title -->
+    <h2 class="section-title">
+        <span class="ar-text">خدماتنا المحترفة</span>
+        <span class="en-text">Our Professional Services</span>
+    </h2>
+    
+    <!-- Services Container -->
+    <div class="services-container">
+
+        <!-- Card 1: AC Repair -->
+        <div class="service-card">
+            <img src="https://cdn.phototourl.com/free/2026-07-11-55677bfb-6cd1-4fac-a113-c706904740b7.jpg" alt="AC Repair">
+            <div class="service-content">
+                <div class="ar-text">
+                    <h3 class="service-title">اے سی کی مرمت اور سروس</h3>
+                    <p class="service-desc">ہر قسم کے ونڈو اور اسپلٹ اے سی کی بہترین سروس، گیس چارجنگ اور مرمت کا کام تسلی بخش کیا جاتا ہے۔</p>
+                </div>
+                <div class="en-text">
+                    <h3 class="service-title">AC Repair & Service</h3>
+                    <p class="service-desc">Professional fixing, deep cleaning, gas refilling, and troubleshooting for Split and Window AC units.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Washing Machine -->
+        <div class="service-card">
+            <img src="https://cdn.phototourl.com/free/2026-07-11-91810011-c55c-47ea-badf-a43feb624e48.jpg" alt="Washing Machine">
+            <div class="service-content">
+                <div class="ar-text">
+                    <h3 class="service-title">واشنگ مشین کی مرمت</h3>
+                    <p class="service-desc">آٹومیٹک اور نارمل واشنگ مشینوں کی فوری سروس اور ہر قسم کے فالٹ درست کرنا।</p>
+                </div>
+                <div class="en-text">
+                    <h3 class="service-title">Washing Machine Repair</h3>
+                    <p class="service-desc">Expert repairing solutions for all brands of automatic and semi-automatic washing machines.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Old AC Purchase -->
+        <div class="service-card">
+            <img src="https://cdn.phototourl.com/free/2026-07-11-23b4fe3c-0e38-4493-8a15-6a4ec3978757.jpg" alt="Old AC">
+            <div class="service-content">
+                <div class="ar-text">
+                    <h3 class="service-title">پرانے اے سی کی خرید و فروخت</h3>
+                    <p class="service-desc">ہم پرانے اور ناکارہ ائیر کنڈیشنر بہترین قیمت پر خریدتے ہیں۔ ابھی رابطہ کریں۔</p>
+                </div>
+                <div class="en-text">
+                    <h3 class="service-title">We Buy Old AC Units</h3>
+                    <p class="service-desc">Want to sell your used or faulty air conditioners? We offer the best competitive prices in Dammam.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Sticky Actions -->
+    <div class="sticky-footer-action">
+        <a href="tel:+966542906848" class="btn-action btn-call">
+            <i class="fas fa-phone-alt"></i> <span class="ar-text">اتصل الآن</span><span class="en-text">Call Now</span>
+        </a>
+        <a href="https://wa.me/966542906848" class="btn-action btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> <span class="ar-text">واتساب</span><span class="en-text">WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="color: white; font-weight: bold; font-size: 1.1rem;" class="ar-text">الصديق التبريد</p>
+        <p style="color: white; font-weight: bold; font-size: 1.1rem;" class="en-text">Al-Saddiq Cooling Services</p>
+        <p><i class="fas fa-map-marker-alt"></i> Dammam, Saudi Arabia</p>
+        <p><i class="fas fa-phone"></i> +966 54 290 6848</p>
+        <hr style="border: 0; border-top: 1px solid #134074; margin: 15px 0;">
+        <p style="font-size: 0.8rem;">&copy; 2026 All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Handle Language Switch Dynamically -->
+    <script>
+        // Set Default Language to Arabic/Urdu (RTL)
+        document.documentElement.setAttribute('lang', 'ar');
+
+        function toggleLanguage() {
+            const htmlTag = document.documentElement;
+            const langBtnText = document.getElementById('lang-btn-text');
+            
+            if (htmlTag.getAttribute('lang') === 'ar') {
+                // Switch to English
+                htmlTag.setAttribute('lang', 'en');
+                langBtnText.textContent = 'العربية';
+            } else {
+                // Switch to Arabic
+                htmlTag.setAttribute('lang', 'ar');
+                langBtnText.textContent = 'English';
+            }
+        }
+    </script>
+</body>
+</html>
